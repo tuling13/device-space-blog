@@ -56,6 +56,8 @@ device-space-blog/
 │   ├── index.css                  # 全局样式 + Tailwind 指令 + 手册样式
 │   ├── components/
 │   │   └── CuteAvatar.jsx         # 可复用 SVG 头像
+│   ├── data/
+│   │   └── posts.js               # 博客文章与标签数据
 │   └── pages/
 │       ├── BlogHome.jsx           # 博客首页
 │       └── GuidePage.jsx          # 手册展示页面
@@ -486,7 +488,61 @@ git push origin main
 
 ---
 
-## 13. 相关链接
+## 13. 如何撰写新文章
+
+目前博客首页的文章列表来自 `src/data/posts.js`。新增或修改文章只需要编辑这个文件，无需改动页面组件。
+
+### 13.1 文章数据格式
+
+```js
+export const posts = [
+  {
+    id: 7,                                    // 唯一编号，递增即可
+    title: '你的文章标题',
+    excerpt: '这篇文章的简短摘要，会显示在首页卡片上。',
+    date: '2026-07-06',                       // 发布日期
+    readTime: '6 分钟',                        // 预计阅读时间
+    tags: ['前端', 'React'],                   // 标签，建议从 allTags 中选取
+    featured: false,
+  },
+  // ... 其他文章
+]
+```
+
+### 13.2 添加一篇新文章的步骤
+
+1. 打开 `src/data/posts.js`。
+2. 在 `posts` 数组最前面（或任意位置）新增一个对象。
+3. 如果使用了新的标签，把它也加到同文件的 `allTags` 数组里。
+4. 本地预览效果：
+
+```bash
+npm run dev
+```
+
+5. 确认无误后提交并推送到 `main`：
+
+```bash
+git add src/data/posts.js
+git commit -m "add: 新文章《你的文章标题》"
+git push origin main
+```
+
+推送后 GitHub Actions 会自动构建部署，几分钟后即可在线上首页看到新文章。
+
+### 13.3 进阶：是否需要文章详情页？
+
+当前首页只展示文章卡片和摘要。如果你希望每篇文章都有独立的详情页、支持 Markdown 正文、按标签筛选跳转等，可以进一步扩展：
+
+- 将每篇文章拆成独立的 Markdown 文件（例如 `content/posts/xxx.md`）。
+- 使用 `react-markdown` 或 `marked` 渲染正文。
+- 添加动态路由 `/post/:id`。
+
+需要时可以让 Agent 帮你实现这个方案。
+
+---
+
+## 14. 相关链接
 
 - 代码仓库：https://github.com/tuling13/device-space-blog
 - 线上博客：https://tuling13.github.io/device-space-blog/
