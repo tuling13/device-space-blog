@@ -5,6 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>device空间 — 个人博客</title>
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect
+        if (redirect) {
+          delete sessionStorage.redirect
+          if (redirect !== location.href) {
+            history.replaceState(null, null, redirect)
+          }
+        }
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
