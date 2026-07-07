@@ -1,11 +1,10 @@
 ---
 title: Node.js 性能优化：从事件循环到内存管理
 date: 2026-06-12
-readTime: 12 分钟
-tags:
+tag:
   - Node.js
   - 后端
-excerpt: 深入理解 Node.js 运行时的核心机制，掌握常见的性能瓶颈排查与优化手段。
+description: 深入理解 Node.js 运行时的核心机制，掌握常见的性能瓶颈排查与优化手段。
 ---
 
 # Node.js 性能优化：从事件循环到内存管理

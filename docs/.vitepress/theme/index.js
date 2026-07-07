@@ -1,6 +1,9 @@
-import DefaultTheme from 'vitepress/theme'
-import './custom.css'
+import BlogTheme from '@sugarat/theme'
+import './style.css'
 
 export default {
-  extends: DefaultTheme,
+  ...BlogTheme,
+  enhanceApp(ctx) {
+    BlogTheme?.enhanceApp?.(ctx)
+  },
 }

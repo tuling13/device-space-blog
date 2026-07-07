@@ -9,6 +9,8 @@
     "preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "@sugarat/theme": "^0.5.23",
+    "pagefind": "^1.5.2",
     "vitepress": "^1.6.3"
   }
 }

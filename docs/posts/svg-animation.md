@@ -1,11 +1,10 @@
 ---
 title: SVG 动画入门：让页面活起来的小技巧
 date: 2026-05-28
-readTime: 7 分钟
-tags:
+tag:
   - SVG
   - 动画
-excerpt: 不需要依赖复杂的动画库，仅用 SVG 和 CSS 就能实现流畅可爱的交互动画。
+description: 不需要依赖复杂的动画库，仅用 SVG 和 CSS 就能实现流畅可爱的交互动画。
 ---
 
 # SVG 动画入门：让页面活起来的小技巧
