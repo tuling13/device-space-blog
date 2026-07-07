@@ -1,3 +1,8 @@
+---
+title: device-space-blog 项目开发、构建与部署手册
+publish: false
+---
+
 # device-space-blog 项目开发、构建与部署手册
 
 本文档整理 `device-space-blog` 个人博客项目从开发到部署到 GitHub Pages 的完整流程，方便你在其他电脑或 Hermes Agent 上继续开发。
