@@ -72,6 +72,7 @@ export default defineConfig({
             { text: 'Redis 缓存实战', link: '/posts/backend/redis-cache-strategy' },
             { text: 'MySQL 性能优化', link: '/posts/backend/mysql-optimization' },
             { text: '消息队列设计模式', link: '/posts/backend/message-queue-patterns' },
+            { text: 'ADMQ RabbitMQ Federation 双向MQTT配置', link: '/posts/backend/admq-rabbitmq-federation' },
           ],
         },
       ],
